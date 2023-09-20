@@ -1,5 +1,10 @@
 use std::fs;
-fn main() {
+use std::fs::File;
+use std::io::Write;
+fn main() -> std::io::Result<()> {
     println!("Hello, world!");
-    let _ = fs::create_dir("./output");
+    let mut file = File::create("./output/test.txt")?;
+    file.write_all(b"Hello?")?;
+    
+    Ok(())
 }
