@@ -34,6 +34,6 @@ jobs:
         # uses: rayluo/github-pages-overwriter@c394294cfbfd3f239625a54b6c2b36e6a47bbfee
         uses: rayluo/github-pages-overwriter@v1.3
         with:
-          source-directory: output
+          source-directory: docs
 
       
