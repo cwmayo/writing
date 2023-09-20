@@ -28,3 +28,15 @@ jobs:
       # Ideally will print hello world
       - name: Compile Rust
         run: cargo run
+
+      # Commit and push new changes
+      - name: Update Changes
+        run: |
+        git config --global user.email "no-reply@github.com"
+        git config --global user.name "GitHub Actions"
+        git add output
+        git commit -m "Update Page Content"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
