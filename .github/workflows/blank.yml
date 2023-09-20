@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v3
 
       # Ideally will print hello world
-      - name: Compile Rust
+      - name: Run rust compiler for output
         run: cargo run
 
       # Commit and push new changes
@@ -36,7 +36,4 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add output
         git commit -m "Update Page Content"
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
