@@ -1,1 +1,6 @@
+---
+color: blue
+position: left
+---
+
 This is the text
