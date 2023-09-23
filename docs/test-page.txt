@@ -1,6 +1,8 @@
 ---
 color: blue
 position: left
+author: Colten Kiehne
+keywords: text, example
 ---
 
-This is the text
+This is the text. It doesn't exactly follow YAML standards, but aims to make it readable.
