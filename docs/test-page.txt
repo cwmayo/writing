@@ -1,8 +1,10 @@
 ---
-color: blue
-position: left
 author: Colten Kiehne
-keywords: text, example
+title: Poem
+text-align: center
+color: orange
 ---
-
-This is the text. It doesn't exactly follow YAML standards, but aims to make it readable.
+Here's a poem,
+That's cool I say,
+but wouldn't it be cooler,
+if it went in a better way?
