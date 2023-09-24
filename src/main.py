@@ -51,6 +51,27 @@ def build_html(filename):
 
     return html_string
 
+def create_html_file():
+    f = open("./output/" + str(file)[:-4] + ".html", "w")
+
+     # All \t and \n are just to make html more readable
+    # config[0] and 1 are title and author
+    title_bar_str = "\t\t\t\t\t<div class=\"title-bar\">\n\t\t\t\t\t\t<span>" + config[0] + "</span>\n\t\t\t\t\t\t<span>" + config[1] + "</span>\n\t\t\t\t\t</div>\n"
+
+    # Split html to isolate CSS
+    style = base_html[0].split("<style>")[1].split("</style>")[0] + "\n\t\t\tp {"
+
+    # Add new CSS elements based on file
+    for style_string in config[2]:
+        style += "\n\t\t\t\t" + style_string[0] + ": " + style_string[1] + ";"
+            
+    style += "\n\t\t\t}\n"
+
+    f.write(base_html[0].split("<style>\n")[0] + "<style>\n" + style + "\n\t\t</style>\n" + 
+            base_html[0].split("</style>\n")[1].split("%%Page-Content")[0] + title_bar_str + 
+            build_html(file) + base_html[1])
+    f.close()
+
 
 if __name__ == "__main__":
     files = os.listdir("./docs")
@@ -59,23 +80,10 @@ if __name__ == "__main__":
 
     for file in files:
         if not ".html" in file:
-            # Run build on files
+            # parse yaml in .txt file in docs
             config = parse_yaml(file)
-            f = open("./output/" + str(file)[:-4] + ".html", "w")
-
-            # All \t and \n are just to make html more readable
-            # config[0] and 1 are title and author
-            title_bar_str = "\t\t\t\t\t<div class=\"title-bar\">\n\t\t\t\t\t\t<span>" + config[0] + "</span>\n\t\t\t\t\t\t<span>" + config[1] + "</span>\n\t\t\t\t\t</div>\n"
-
-            style = base_html[0].split("<style>")[1].split("</style>")[0] + "\n\t\t\tp {"
-
-            for style_string in config[2]:
-                style += "\n\t\t\t\t" + style_string[0] + ": " + style_string[1] + ";"
+            # create ./output html file
+            create_html_file()
             
-            style += "\n\t\t\t}\n"
-
-            f.write(base_html[0].split("<style>\n")[0] + "<style>\n" + style + "\n\t\t</style>\n" + base_html[0].split("</style>\n")[1].split("%%Page-Content")[0] + title_bar_str + build_html(file) + base_html[1])
-
-            f.close()
 
             

@@ -1,10 +1,11 @@
 ---
 author: Colten Kiehne
-title: Poem
+title: A Test Poem
 text-align: center
-color: orange
+font-size: 60px
 ---
-Here's a poem,
-That's cool I say,
-but wouldn't it be cooler,
-if it went in a better way?
+Here's an example
+This poem is centered
+and has a larger font size
+What do you think?
+
