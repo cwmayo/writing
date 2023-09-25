@@ -1,6 +1,8 @@
 # Writing
 Works by Mayo's Creative Writing Students
 
+Live website: [cwmayo.github.io/writing](https://cwmayo.github.io/writing/)
+
 # How to create file
 1. Make sure you are signed into your github account
 2. Click the period key to enter the online editor
