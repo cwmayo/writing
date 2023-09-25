@@ -25,7 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Ideally will print hello world
+      # Install bs4 python module
+      - name: Install bs4
+        run: pip3 install bs4
+
+      # Ideally will compile html files
       - name: Run python builder
         run: python3 ./src/main.py
 

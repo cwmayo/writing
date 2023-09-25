@@ -72,10 +72,6 @@ def create_html_file():
             build_html(file) + base_html[1])
     f.close()
 
-    print(base_html[0].split("<style>\n")[0] + "<style>\n" + style + "\n\t\t</style>\n" + 
-            base_html[0].split("</style>\n")[1].split("%%Page-Content")[0] + title_bar_str + 
-            build_html(file) + base_html[1])
-
 
 if __name__ == "__main__":
     files = os.listdir("./docs")
