@@ -31,7 +31,7 @@ jobs:
 
       # Ideally will compile html files
       - name: Run python builder
-        run: python3 ./src/main.py
+        run: python3 ./src/builder.py
 
       - name: GitHub Pages Overwriter
         # You may pin to the exact commit or the version.
