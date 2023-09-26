@@ -1,0 +1,81 @@
+head,
+body {
+  height: 100%;
+  background-color: rgb(240, 240, 240);
+  overflow-x: hidden;
+}
+
+.topbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("https://i.pinimg.com/originals/67/18/22/671822c2f63dd5f65d8fd15c9710420b.jpg");
+  background-position: center;
+  height: 15%;
+  width: 100%;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+}
+
+#title {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#title::selection {
+  background-color: none;
+}
+
+.top-cover {
+  position: absolute;
+  top: 0px;
+  margin-top: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+
+  border-radius: 10px;
+}
+
+.page-body {
+  position: absolute;
+  top: 20%;
+  height: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  border-radius: 10px;
+  background-color: #e5e5e5;
+}
+
+.center {
+  text-align: center;
+}
+
+p::selection {
+  background-color: yellow;
+}
+
+.title-bar span {
+  font-size: 40px;
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.title-bar {
+  margin: 0px;
+  padding: 0px;
+}
