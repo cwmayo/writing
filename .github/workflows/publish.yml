@@ -29,6 +29,10 @@ jobs:
       - name: Install bs4
         run: pip3 install bs4
 
+      # Install pyyaml python module
+      - name: Install pyyaml
+        run: pip3 install pyyaml
+
       # Ideally will compile html files
       - name: Run python builder
         run: python3 ./src/builder.py

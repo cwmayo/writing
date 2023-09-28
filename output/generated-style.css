@@ -63,7 +63,7 @@ p::selection {
   background-color: yellow;
 }
 
-.title-bar span {
+.info-bar span {
   font-size: 40px;
   width: 49%;
   display: inline-block;
@@ -75,7 +75,7 @@ p::selection {
   border-bottom-color: black;
 }
 
-.title-bar {
+.info-bar {
   margin: 0px;
   padding: 0px;
 }

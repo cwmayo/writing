@@ -1,10 +1,10 @@
 ---
-author: Colten Kiehne
-title: A Test Poem
-text-align: center
-font-size: 60px
+ title: Test Poem
+ author: Colten Kiehne
+ keywords:
+    - test
+    - poem
+    - best poem
 ---
-Here's an example
-This poem is centered
-and has a larger font size
-What do you think?
+Here's the poem
+Hopefully it looks somewhat decent
