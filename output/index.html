@@ -8,98 +8,27 @@
   <title>
    Mayo Creative Writing
   </title>
-  <script defer="" src="">
-  </script>
+  <link rel="stylesheet" href="generated-style.css">
+  <script defer src="index-script.js"></script>
  </head>
  <body>
   <style>
-   head, body {
-            height: 100%;
-            background-color: rgb(240, 240, 240);
-            overflow-x: hidden;
-        }
+    .hidden :not(:first-child) {
+      display: none;
+    }
 
-      .topbar {
-        position: absolute;
-        top: 0px;
-        left: 0px;
+    .shown {
+      float: left;
+    }
 
-        background-image: url("https://i.pinimg.com/originals/67/18/22/671822c2f63dd5f65d8fd15c9710420b.jpg");
-        background-position: center;
-        height: 15%;
-        width: 100%;
+    .shown a {
+      margin-left: 5%;
+      font-size: large;
+    }
 
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.5);
-
-        text-align: center;
-      }
-
-      #title {
-        color: white;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-        
-      }
-
-      #title::selection {
-        background-color: none;
-      }
-
-      .top-cover {
-        position: absolute;
-        top: 0px;
-        margin-top: 0px;
-        background-color: rgba(0, 0, 0, 0.3);
-        height: 100%;
-        width: 100%;
-
-        border-radius: 10px;
-      }
-
-      .page-body {
-        position: absolute;
-        top: 20%;
-        
-        height: 100%;
-        width: 90%;
-
-        margin-left: 5%;
-        margin-right: 5%;
-
-        border-radius: 10px;
-        background-color: #e5e5e5;
-      }
-
-      .center {
-        text-align: center;
-      }
-
-      p::selection {
-        background-color: yellow;
-      }
-
-      .featured-pages {
-        width: 100%;
-      }
-      
-      .featured-pages a {
-        width: 100%;
-      }
-
-      .content-display :not(:first-child) {
-        display: none;
-        height: 0px;
-        margin-left: 5%;
-        padding: 10px;
-        transition: 0.3s;
-      }
-
-      .content-display:hover :not(:first-child) {
-        display: block;
-        height: auto;
-      }
+    .content-display {
+      width: 100%;
+    }
 
   </style>
   <!-- topbar container -->
@@ -116,15 +45,16 @@
     <h1 class="center">
      Welcome to Mayo's Creative Writing Website!
     </h1>
+    <p style="margin: 5%;">Some text about the website... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor itaque quisquam laudantium. Velit consequatur quia at quaerat blanditiis officiis, ut perferendis sit quae, voluptatibus suscipit voluptatum hic corrupti corporis quidem. Tempore deleniti, perspiciatis neque laboriosam laborum assumenda sapiente quibusdam odio ratione praesentium maiores quaerat hic voluptatibus doloremque velit a unde rerum voluptatem ab magni! Autem ad, quibusdam dicta laudantium optio dolore magnam nostrum ipsam accusantium fugit sunt. Non voluptatibus reprehenderit dolorum dolore ad aperiam molestiae tenetur voluptate! Officiis veritatis nihil ut? Ipsum, saepe repudiandae sed repellendus vero sint mollitia. Vitae eius beatae incidunt alias corrupti recusandae vero consequuntur nesciunt explicabo enim molestiae, facere iure illo delectus, iste tenetur quod sequi. Totam quo facere sapiente! Voluptatibus et assumenda, aspernatur cumque, eligendi ut voluptate, dolore omnis quo quasi commodi molestias eaque. Veritatis minima pariatur labore, similique ipsam doloribus repellendus quibusdam beatae? Dignissimos, sit nobis ut, dolorum dolorem pariatur accusantium blanditiis rem consequuntur corrupti optio maiores nostrum id praesentium quos beatae ea quia modi? Veniam sint optio fugiat sapiente expedita, deserunt possimus maiores labore aliquam delectus, qui rem atque veritatis provident saepe numquam dolorum quasi, ex quae pariatur beatae at inventore molestias! Amet soluta quam, quod doloremque blanditiis saepe quia molestias. Totam, vero.</p>
     <div id="featured-pages">
-     <div class="content-display">
-      <h2 id="short-stories">Short Stories</h2>
-      <a href="">First one</a>
-      <a href="">Second</a>
+     <div class="content-display hidden">
+      <h2 id="short-story">Short Stories</h2>
      </div>
-     <div class="content-display">
+     <div class="content-display hidden">
       <h2 id="poems">Poems</h2>
-      <a href="test-page">Amazing poem</a>
+     </div>
+     <div>
+      <h2 id="other">Other</h2>
      </div>
     </div>
    </div>

@@ -17,8 +17,7 @@ if __name__ == "__main__":
 
     files_href = []
 
-    
-    
+    index = BeautifulSoup(open("./output/index.html").read(), "html.parser")
     # Build html files from parsed .txt in docs directory
     for file_name in files:
         html = BeautifulSoup(open("./docs/template.html").read(), "html.parser")
@@ -31,9 +30,16 @@ if __name__ == "__main__":
                 html.find(id="author").string = yaml_dict["author"]
             if "title" in yaml_dict:
                 html.find(id="work-title").string = yaml_dict["title"]
+            
+            if "text-style" in yaml_dict:
+                text = "\tp {\n"
+                for style in yaml_dict["text-style"]:
+                    key_str = list(style.keys())[0]
+                    text += "\t\t" + key_str + ": " + style[key_str] + ";\n"
+                html.find(id="page-style").string = text + "\t}"
+                    
 
             src_content = get_file_text(open("./docs/" + file_name).read())
-            files_href.append(file_name[:-3] + "html")
             # Separate text based on paragraphs
             src_content = src_content.split("\n")
             
@@ -43,12 +49,15 @@ if __name__ == "__main__":
                 paragraph.string = content_paragraph
                 content_div.append(paragraph)
 
-            
-
-            
-            
             open("./output/" + file_name[:-3] + "html", "w").write(html.prettify())
+            type = index.find(id=(yaml_dict.get('type', 'other')))
+            link = index.new_tag("a")
+            link['href'] = file_name[:-3] + "html"
+            link.string = yaml_dict.get('title', 'Untitled')
+            type.append(link)
 
+
+    open("./output/index.html", "w").write(index.prettify())
 
             
 

@@ -20,7 +20,10 @@ At the top of your txt file, you may optionally put some modifiers that will cha
 ---
 author: your name
 title: work title
-keywords: creative, writing, example
+keywords:
+    - test
+    - poem
+    - best poem
 ---
 ```
 These are the special keywords that will change elememts on the page. Author and title will change the author and title sections at the top of the page. Keywords will help provide words that will bring the work up when searched for. Author and title will also be included in the search keywords.
