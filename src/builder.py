@@ -50,7 +50,7 @@ if __name__ == "__main__":
                 content_div.append(paragraph)
 
             open("./output/" + file_name[:-3] + "html", "w").write(html.prettify())
-            type = index.find(id=(yaml_dict.get('type', 'other')))
+            type = index.find(id=yaml_dict.get('type', 'other'))
             link = index.new_tag("a")
             link['href'] = file_name[:-3] + "html"
             link.string = yaml_dict.get('title', 'Untitled')
