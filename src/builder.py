@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     files_href = []
 
-    index = BeautifulSoup(open("./output/index.html").read(), "html.parser")
+    index = BeautifulSoup(open("./docs/index.html").read(), "html.parser")
     # Build html files from parsed .txt in docs directory
     for file_name in files:
         html = BeautifulSoup(open("./docs/template.html").read(), "html.parser")

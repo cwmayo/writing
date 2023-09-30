@@ -1,0 +1,6 @@
+---
+ title: A Poem
+ author: Colten Kiehne
+ type: poem
+---
+Hopefully this will work.
