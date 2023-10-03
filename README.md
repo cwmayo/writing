@@ -30,19 +30,31 @@ These are the special keywords that will change elememts on the page. Author and
 
 ```
 ---
-color: blue
-font-size: 30px
+title: a title
+author: your name
+type: work type (poem, short story, etc.) 
+keywords:
+    - Some keyword
+    - Another
+text-style:
+    - font-size: 20px
+    - color: blue
 ---
 ```
-These are a couple of examples of changing the display of the text itself. Color will change the color of the text, and font size will change the display font-size (px standing for pixels). There are other ones as well, but these serve for basic functionality. More functionality can also be provided in the future.
+The title, author, and type keywords are ones that you should put in every file. This will help to differentiate between different works as well as make the website more readable. Keywords are optional, but should be included if I ever decide to make a search feature for the website.
 
-An example of a file could be...
-```
----
-author: name
-color: purple
----
+text-style will change the [CSS](https://www.w3schools.com/css/) of the 'p' tags. Changing the values there will change how the work text is displayed. You can read about it, or look here for some helpful ones.
 
-This is the purple text
 ```
-Not everything has to be specified, default values will be entered for anything lacking in the YAML. Make sure that if you use the YAML, you include both the beginning '---' and end '---' or your file may be parsed incorrectly.
+font-size: 20px (Will change the font size to a 20 point font)
+
+color: red (Will change the font color to whatever color specified)
+
+text-indent: 20px (Will indent the first paragraph by 20 pixels, but you can also use % e.g. 3% would indent by 3 percent of the page width)
+
+text-align: center (Will center the text, useful for poems)
+
+
+```
+
+Not everything has to be specified, default values will be entered for anything lacking in the YAML. Make sure that if you use the YAML, you include <b>both</b> the beginning '---' and end '---' or your file may be parsed incorrectly.
