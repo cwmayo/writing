@@ -1,0 +1,6 @@
+---
+    title: Qwerty
+    author: Ruby
+    type: short-story
+---
+Run
