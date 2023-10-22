@@ -1,0 +1,10 @@
+---
+    title: Example Page
+    author: Colten Kiehne
+    type: other
+    text-style:
+        - text-align: center
+---
+
+This is just an example page,
+so you can see how everything works.
