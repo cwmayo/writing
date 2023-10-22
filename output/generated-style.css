@@ -79,3 +79,20 @@ p::selection {
   margin: 0px;
   padding: 0px;
 }
+
+.featured-pages:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content-display {
+  float: left;
+  width: 31%;
+  padding: 10px;
+}
+
+.content-display a {
+  display: block;
+  margin: 2%;
+}
