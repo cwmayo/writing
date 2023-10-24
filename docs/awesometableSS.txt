@@ -1,7 +1,7 @@
 ---
-Title: Creative-Short-story
-Author: Awesome-table-of-4
-Type: Short-Story
+title: Creative Short Story
+author: Awesome-table-of-4
+type: short-story
 text-style:
  - font-size: 15px
  - color: purple
