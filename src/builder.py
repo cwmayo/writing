@@ -30,6 +30,8 @@ if __name__ == "__main__":
                 html.find(id="author").string = yaml_dict["author"]
             if "title" in yaml_dict:
                 html.find(id="work-title").string = yaml_dict["title"]
+
+            print(yaml_dict)
             
             if "text-style" in yaml_dict:
                 text = "\tp {\n"
